@@ -1,0 +1,11 @@
+/* Reset margin và padding của các thẻ H */
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+/* Reset margin và padding của các phần tử khác nếu cần */
+body, p, ul, ol, li, dl, dt, dd, blockquote, figure, figcaption, pre, table, th, td, input {
+    margin: 0;
+    padding: 0;
+}
