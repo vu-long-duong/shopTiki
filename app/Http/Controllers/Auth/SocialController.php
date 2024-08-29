@@ -25,23 +25,23 @@ class SocialController extends Controller
             $user = Socialite::driver($provider)->user();
     
             $userData = [
+                'google_id' => $user->id,
                 'name' => $user->name,
                 'email' => $user->email,
                 'avatar' => $user->avatar,
+                'password' => bcrypt(Str::random(16)),
             ];
     
-            $userData[$provider . '_id'] = $user->id;
-    
-            $existingUser = User::where($provider . '_id', $user->id)->first();
+            $existingUser = User::where($provider . '_id', $userData['google_id'])->first();
     
             if ($existingUser) Auth::login($existingUser); 
             else {
-                $newUser = User::create($userData + ['password' => bcrypt(Str::random(16))]);
+                $newUser = User::create($userData);
                 Auth::login($newUser);
             }
     
             return redirect()->intended('/');
-        } catch (\Throwable $th) {
+        } catch (\Laravel\Socialite\Two\InvalidStateException $e) {
             dd('Tài khoản không tồn tại');
         }
 

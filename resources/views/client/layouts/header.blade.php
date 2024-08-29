@@ -1,7 +1,7 @@
 <header class="header bg-white">
     <div class="grid flex">
         <div class="header__logo">
-            <img src="{{ asset('images/logo/logo_Tiki.png')}}" class="header__logo-img" alt="tiki-logo">
+            <img src="{{ asset('client/images/logo/logo_Tiki.png')}}" class="header__logo-img" alt="tiki-logo">
             <span class="header__logo-text">Tốt & Nhanh</span>
         </div>
         <div class="searchContainer__titleContainer">
@@ -13,7 +13,7 @@
                     <div class="search_history">
                         <div class="search_history-heading">
                             <h3 class="search_history-heading-text">Đón chờ siêu sale 8.8</h3>
-                            <img src="{{ asset('images/search/vouncher2_search.png')}}" alt="" class="search_history-heading-img">
+                            <img src="{{ asset('client/images/search/vouncher2_search.png')}}" alt="" class="search_history-heading-img">
                         </div>
                         <div class="search_history-main">
                             <ul class="search_history-main-list">
@@ -43,32 +43,32 @@
                         </div>
                         <div class="search_history-popular">
                             <div class="search_history-popular-heading">
-                                <img src="{{ asset('images/search/population_icon.png')}}" class="search_history-popular-heading-img" alt="">
+                                <img src="{{ asset('client/images/search/population_icon.png')}}" class="search_history-popular-heading-img" alt="">
                                 <h3 class="search_history-popular-heading-text">Tìm kiếm phổ biến</h3>
                             </div>
                             <div href="" class="search_history-popular-list">
                                 <a class="search_history-popular-item">
-                                    <img src="{{ asset('images/search/item_popular1.png')}}" class="search_history-popular-item-img" alt="">
+                                    <img src="{{ asset('client/images/search/item_popular1.png')}}" class="search_history-popular-item-img" alt="">
                                     <div class="search_history-popular-item-text">anessa official store</div>
                                 </a>
                                 <a class="search_history-popular-item">
-                                    <img src="{{ asset('images/search/item_popular2.png')}}" class="search_history-popular-item-img" alt="">
+                                    <img src="{{ asset('client/images/search/item_popular2.png')}}" class="search_history-popular-item-img" alt="">
                                     <div class="search_history-popular-item-text">áo khoác nam trung niên</div>
                                 </a>
                                 <a class="search_history-popular-item">
-                                    <img src="{{ asset('images/search/item_popular3.png')}}" class="search_history-popular-item-img" alt="">
+                                    <img src="{{ asset('client/images/search/item_popular3.png')}}" class="search_history-popular-item-img" alt="">
                                     <div class="search_history-popular-item-text">áo sơ mi nu tay ngắn</div>
                                 </a>
                                 <a class="search_history-popular-item">
-                                    <img src="{{ asset('images/search/item_popular4.png')}}" class="search_history-popular-item-img" alt="">
+                                    <img src="{{ asset('client/images/search/item_popular4.png')}}" class="search_history-popular-item-img" alt="">
                                     <div class="search_history-popular-item-text">áo sơ mi nu tay ngắn</div>
                                 </a>
                                 <a class="search_history-popular-item">
-                                    <img src="{{ asset('images/search/item_popular5.png')}}" class="search_history-popular-item-img" alt="">
+                                    <img src="{{ asset('client/images/search/item_popular5.png')}}" class="search_history-popular-item-img" alt="">
                                     <div class="search_history-popular-item-text">áo sơ mi nu tay ngắn</div>
                                 </a>
                                 <a class="search_history-popular-item">
-                                    <img src="{{ asset('images/search/item_popular6.png')}}" class="search_history-popular-item-img" alt="">
+                                    <img src="{{ asset('client/images/search/item_popular6.png')}}" class="search_history-popular-item-img" alt="">
                                     <div class="search_history-popular-item-text">áo sơ mi nu tay ngắn</div>
                                 </a>
                             </div>
@@ -78,49 +78,49 @@
                             <ul class="search_history-category-list">
                                 <li class="search_history-category-item">
                                     <div class="search_history-category-item-bg">
-                                        <img src="{{ asset('images/search/item_category1.png')}}" alt="" class="search_history-category-img">
+                                        <img src="{{ asset('client/images/search/item_category1.png')}}" alt="" class="search_history-category-img">
                                     </div>
                                     <span class="search_history-category-text">Đồ chơi - Mẹ và bé</span>
                                 </li>
                                 <li class="search_history-category-item">
                                     <div class="search_history-category-item-bg">
-                                        <img src="{{ asset('images/search/item_category2.png')}}" alt="" class="search_history-category-img">
+                                        <img src="{{ asset('client/images/search/item_category2.png')}}" alt="" class="search_history-category-img">
                                     </div>
                                     <span class="search_history-category-text">Điện thoại - Máy tính bảng</span>
                                 </li>
                                 <li class="search_history-category-item">
                                     <div class="search_history-category-item-bg">
-                                        <img src="{{ asset('images/search/item_category3.png')}}" alt="" class="search_history-category-img">
+                                        <img src="{{ asset('client/images/search/item_category3.png')}}" alt="" class="search_history-category-img">
                                     </div>
                                     <span class="search_history-category-text">Ngon</span>
                                 </li>
                                 <li class="search_history-category-item">
                                     <div class="search_history-category-item-bg">
-                                        <img src="{{ asset('images/search/item_category4.png')}}" alt="" class="search_history-category-img">
+                                        <img src="{{ asset('client/images/search/item_category4.png')}}" alt="" class="search_history-category-img">
                                     </div>
                                     <span class="search_history-category-text">Làm đẹp - Sức khỏe</span>
                                 </li>
                                 <li class="search_history-category-item">
                                     <div class="search_history-category-item-bg">
-                                        <img src="{{ asset('images/search/item_category5.png')}}" alt="" class="search_history-category-img">
+                                        <img src="{{ asset('client/images/search/item_category5.png')}}" alt="" class="search_history-category-img">
                                     </div>
                                     <span class="search_history-category-text">Điện gia dụng</span>
                                 </li>
                                 <li class="search_history-category-item">
                                     <div class="search_history-category-item-bg">
-                                        <img src="{{ asset('images/search/item_category6.png')}}" alt="" class="search_history-category-img">
+                                        <img src="{{ asset('client/images/search/item_category6.png')}}" alt="" class="search_history-category-img">
                                     </div>
                                     <span class="search_history-category-text">Thời trang nữ</span>
                                 </li>
                                 <li class="search_history-category-item">
                                     <div class="search_history-category-item-bg">
-                                        <img src="{{ asset('images/search/item_category7.png')}}" alt="" class="search_history-category-img">
+                                        <img src="{{ asset('client/images/search/item_category7.png')}}" alt="" class="search_history-category-img">
                                     </div>
                                     <span class="search_history-category-text">Thời trang nam</span>
                                 </li>
                                 <li class="search_history-category-item">
                                     <div class="search_history-category-item-bg">
-                                        <img src="{{ asset('images/search/item_category8.png')}}" alt="" class="search_history-category-img">
+                                        <img src="{{ asset('client/images/search/item_category8.png')}}" alt="" class="search_history-category-img">
                                     </div>
                                     <span class="search_history-category-text">Giày - Dép nữ</span>
                                 </li>
@@ -136,7 +136,7 @@
                         <i class="header__user-head-icon fa-solid fa-house"></i>
                         <div class="header__user-head">Trang chủ</div>
                     </div>
-                    <div class="header__user-head-wrap header__user-head-account">
+                    <div id="js-account" class="header__user-head-wrap header__user-head-account">
                         <i class="header__user-head-icon fa-regular fa-face-grin-wink"></i>
                         <div class="header__user-head">Tài khoản</div>
                         <ul class="header__user-control-list">

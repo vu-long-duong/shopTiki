@@ -1,0 +1,14 @@
+.flex { display: flex!important;}
+
+.text-focus {
+    cursor: pointer;
+}
+
+.list-rearrange {
+    padding-left: 0;
+    list-style: none;
+}
+
+.rearrange.d-flex.align-items-center {
+    cursor: grab;
+}
