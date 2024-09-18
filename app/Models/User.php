@@ -8,6 +8,9 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 use App\Models\Role;
+use App\Entities\City;
+use App\Entities\District;
+use App\Entities\Ward;
 
 class User extends Authenticatable
 {
@@ -44,11 +47,6 @@ class User extends Authenticatable
         'provider_token',
         'avatar',
     ];
-
-    public function role()
-    {
-        return $this->belongsTo(Role::class, 'role_id');
-    }
 
 
     /**

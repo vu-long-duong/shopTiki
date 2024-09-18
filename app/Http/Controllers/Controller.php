@@ -25,9 +25,12 @@ class Controller extends BaseController
     {
         $headers = Schema::getColumnListing($table);
         $translatedHeaders = array();
-        $translatedHeaders = array_map(function($header) use ($table) {
+ 
+        $values = array_map(function($header) use ($table) {
             return __('header.' . $table . '.' . $header);
         }, $headers);
+        
+        $translatedHeaders = array_combine($headers, $values);
 
         return $translatedHeaders;
     }

@@ -3,6 +3,6 @@
     @if ($required)
         <i class="fas fa-info-circle ml-2 text-danger"></i>
     @endif
-    <input id={{ $id }} name={{ $name }} type="{{ $type }}" class="form-control"
+    <input name={{ $name }} type="{{ $type }}" class="form-control"
         @if ($required) required @endif placeholder="Nhập {{ $title }} ...">
 </div>

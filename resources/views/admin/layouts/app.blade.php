@@ -18,13 +18,12 @@
     <link rel="stylesheet"
         href="{{ asset('admin/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css') }}">
     <script src="{{ asset('admin/plugins/jquery/jquery.min.js') }}"></script>
-    <script src="{{ asset('admin/plugins/sweetalert2/sweetalert2.min.js')}}"></script>
-        <!-- Toastr -->
+    <script src="{{ asset('admin/plugins/sweetalert2/sweetalert2.min.js') }}"></script>
+    <!-- Toastr -->
     <script src="{{ asset('admin/plugins/toastr/toastr.min.js') }}"></script>
 
-
-
-    <link rel="stylesheet" href="{{ asset('admin/plugins/jquery-ui/jquery-ui.min.css') }}"></link>
+    <link rel="stylesheet" href="{{ asset('admin/plugins/jquery-ui/jquery-ui.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('admin/plugins/flag-icon-css/css/flag-icon.min.css') }}">
     <!-- iCheck -->
     <link rel="stylesheet" href="{{ asset('admin/plugins/icheck-bootstrap/icheck-bootstrap.min.css') }}">
     <!-- JQVMap -->
@@ -95,9 +94,7 @@
     <script src="{{ asset('admin/dist/js/adminlte.js') }}"></script>
     <!-- Toastr -->
     <script src="{{ asset('admin/plugins/toastr/toastr.min.js') }}"></script>
-
-    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-    <script src="{{ asset('admin/dist/js/pages/dashboard.js') }}"></script>
+    <script src="{{ asset('admin/js/custom.js') }}"></script>
     @stack('scripts')
 </body>
 

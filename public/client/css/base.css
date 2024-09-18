@@ -192,6 +192,10 @@ html {
     color: var(--primary-color)!important;
 }
 
+.white-color {
+    color: var(--white-color) !important;
+}
+
 .turmeric-color {
     color:  #FC820A !important;
 }
@@ -232,6 +236,10 @@ html {
 
 .bg-white {
     background-color: var(--white-color);
+}
+
+.bg-primary {
+    background-color: var(--primary-color) !important;
 }
 
 .bg-gray {
@@ -978,4 +986,18 @@ input[type="checkbox"]:checked ~ .checkbox-custom:before {
     gap: 6px;
     text-decoration: none;
     padding: 0 8px;
+}
+
+.alert {
+    position: relative;
+    padding: 1rem 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+}
+
+.alert-danger {
+    color: #842029;
+    background-color: #f8d7da;
+    border-color: #f5c2c7;
 }

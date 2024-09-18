@@ -29,9 +29,9 @@ class UserRequest extends FormRequest
                     'password' => 'required|string|min:8',
                     'age' => 'nullable|integer',
                     'phone' => 'required|string',
-                    'ward' => 'nullable|string',
-                    'district' => 'nullable|string',
-                    'city' => 'nullable|string',
+                    'ward_id' => 'nullable|string|exists:wards,id',
+                    'district_id' => 'nullable|string|exists:districts,id',
+                    'city_id' => 'nullable|string|exists:cities,id',
                     'postal_code' => 'nullable|string',
                     'country' => 'nullable|string',
                     'date_of_birth' => 'nullable|date',
@@ -41,15 +41,16 @@ class UserRequest extends FormRequest
                 
             case 'PUT':
             case 'PATCH':
+                $userId = $this->route('id');
                 return [
                     'name' => 'required|string|max:255',
-                    'email' => 'required|email|unique:users,email,' . $this->user->id,
+                    'email' => 'required|email|unique:users,email,' . $userId,
                     'password' => 'nullable|string|min:8',
                     'age' => 'nullable|integer',
                     'phone' => 'nullable|string',
-                    'ward' => 'nullable|string',
-                    'district' => 'nullable|string',
-                    'city' => 'nullable|string',
+                    'ward_id' => 'nullable|string|exists:wards,id',
+                    'district_id' => 'nullable|string|exists:districts,id',
+                    'city_id' => 'nullable|string|exists:cities,id',
                     'postal_code' => 'nullable|string',
                     'country' => 'nullable|string',
                     'date_of_birth' => 'nullable|date',

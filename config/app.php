@@ -170,6 +170,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         \Prettus\Repository\Providers\RepositoryServiceProvider::class,
+        App\Providers\GoogleDriveServiceProvider::class,
     ])->toArray(),
 
     /*

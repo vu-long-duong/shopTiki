@@ -18,9 +18,9 @@ return new class extends Migration
             $table->string('age')->nullable();//tuổi
             $table->string('phone')->nullable();//số điện thoại
             $table->text('address')->nullable();//địa chỉ chi tiết
-            $table->string('ward')->nullable();//xã(phường)
-            $table->string('district')->nullable();//quận(huyện)
-            $table->string('city')->nullable();//thành phố(tỉnh)
+            $table->string('ward_id')->nullable();//xã(phường)
+            $table->string('district_id')->nullable();//quận(huyện)
+            $table->string('city_id')->nullable();//thành phố(tỉnh)
             $table->string('postal_code')->nullable();//mã bưu điện
             $table->string('country')->nullable();//quốc gia
             $table->string('email')->unique();//gmail

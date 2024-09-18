@@ -8,7 +8,7 @@
                     <div class="auth-form__heading">Đăng nhập</div>
                     <div class="auth-form__body">
                         <div class="input-wrap pdt-16">
-                            <input type="text" class="input-account-form" placeholder="Tài khoản">
+                            <input type="text" class="input-account-form" placeholder="Email/Số điện thoại">
                             <div class="input-password-wrap">
                                 <input type="password" class="input-password-form flex-1" placeholder="Mật khẩu">
                                 <i class="input-password-icon fa-solid fa-eye"></i>
@@ -17,7 +17,7 @@
                         <button class="btn btn-primary bg-primary white-color"> Đăng nhập</button>
                         <div class="forgotPassword__Register">
                             <a href="" class="no-light-through fs-13 primary-color">Quên mật khẩu</a>
-                            <a href="" class="no-light-through fs-13 primary-color">Đăng ký</a>
+                            <a href="" class="no-light-through fs-13 primary-color">Đăng nhập bằng sms</a>
                         </div>
                         <div class="social-heading">
                             <span>Hoặc</span>

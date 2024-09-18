@@ -8,10 +8,11 @@
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-left">
                             <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
-                            <li class="breadcrumb-item active">Danh sách người dùng</li>
+                            <li class="breadcrumb-item active">{{ __('header.users.list_users') }}</li>
                         </ol>
                     </div>
-                    <a class="nav-link ml-auto" href="#" data-toggle="modal" data-target="#modal-default">
+                    <a class="nav-link ml-auto rearrange" href="#" data-toggle="modal" data-target="#content-rearrange"
+                        data-url="{{ route('admin.getheader', ['table' => $tableName]) }}">
                         <i class="fas fa-th-large"></i>
                         <span class="ml-2">Sắp xếp</span>
                     </a>
@@ -26,11 +27,11 @@
                         <div class="card">
 
                             <div class="card-header">
-                                <h3 class="card-title">Danh sách người dùng</h3>
+                                <h3 class="card-title">{{ __('header.users.list_users') }}</h3>
 
                                 <div class="card-tools">
                                     <button type="button" class="btn btn-tool create" data-toggle="modal"
-                                        data-target="#modal-create">
+                                        data-target="#content-create">
                                         <i class="fas fa-user-plus"></i>
                                     </button>
                                     <button type="button" class="btn btn-tool" data-card-widget="collapse"
@@ -47,13 +48,14 @@
                                 <table id="example2" class="table table-hover">
                                     <thead>
                                         <tr>
-                                            <th>Id</th>
-                                            <th>Tên</th>
-                                            <th>Email</th>
-                                            <th>Số điện thoại</th>
-                                            <th>Địa chỉ</th>
-                                            <th class="text-center">Chức vụ</th>
-                                            <th class="text-center">Chức năng</th>
+                                            <th>{{ __('header.users.id') }}</th>
+                                            <th>{{ __('header.users.name') }}</th>
+                                            <th>{{ __('header.users.email') }}</th>
+                                            <th>{{ __('header.users.phone') }}</th>
+                                            <th>{{ __('header.users.address') }}</th>
+                                            <th>{{ __('header.users.profile_picture') }}</th>
+                                            <th class="text-center">{{ __('header.users.role') }}</th>
+                                            <th class="text-center">{{ __('header.users.control') }}</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -64,19 +66,27 @@
                                                 <td>{{ $user->email }}</td>
                                                 <td>{{ $user->phone }}</td>
                                                 <td>{{ $user->address }}</td>
+                                                <td>
+                                                    {{-- <iframe
+                                                        src="https://drive.google.com/file/d/1i3TTvm_Xm5_vDJmu6CtOgq6tVg1kGB_Y/preview"
+                                                        style="width: 200px; height: 200px;" alt=""></iframe> --}}
+                                                    {{-- <img src="{{ get_image($user->profile_picture) }}" style="width: 200px; height: 200px;"  alt=""> --}}
+                                                </td>
                                                 <td id="role_name_{{ $user->id }}"
                                                     class="text-center text-focus font-weight-bold">
                                                     {{ $user->role->name ?? 'Không có chức vụ' }}
                                                 </td>
                                                 <td class="project-actions text-center">
                                                     <a data-id="{{ $user->id }}" class="btn btn-info btn-sm update"
-                                                        data-toggle="modal" data-target="#modal-update"
-                                                        href="{{ route('admin.users.oneshow', ['id' => $user->id]) }}">
+                                                        data-toggle="modal" data-target="#content-update"
+                                                        data-url="{{ route('admin.users.oneshow', ['id' => $user->id]) }}">
                                                         <i class="fas fa-pencil-alt">
                                                         </i>
                                                     </a>
 
-                                                    <a class="btn btn-danger btn-sm" href="#">
+                                                    <a class="btn btn-danger btn-sm" data-toggle="modal"
+                                                        data-target="#content-delete"
+                                                        data-url="{{ route('admin.users.oneshow', ['id' => $user->id]) }}">
                                                         <i class="fas fa-trash">
                                                         </i>
                                                     </a>
@@ -104,47 +114,13 @@
     @include('admin.layouts.rearrange')
     @include('admin.user.create')
     @include('admin.user.update')
+    @include('admin.user.delete')
+
     @include('components.message')
 @endsection
 
 @push('scripts')
     <script type="text/javascript">
-        $(document).on('click', '.create', function(e) {
-            $('#modal-default').modal('show');
-        });
-
-        $(document).on('click', '.update', function(e) {
-            e.preventDefault();
-
-            var url = $(this).attr('href');
-            $.ajax({
-                url: url,
-                method: 'GET',
-                success: function(response) {
-                    // Đổ dữ liệu vào các phần tử trong modal
-                    $('#modal-default form').attr('action', url);
-                    $('#modal-default [name="name"]').val(response.data.name);
-                    $('#modal-default [name="email"]').val(response.data.email);
-                    $('#modal-default [name="phone"]').val(response.data.phone);
-                    $('#modal-default [name="age"]').val(response.data.age);
-                    $('#modal-default [name="address"]').val(response.data.address);
-                    $('#modal-default [name="ward"]').val(response.data.ward);
-                    $('#modal-default [name="district"]').val(response.data.district);
-                    $('#modal-default [name="city"]').val(response.data.city);
-                    $('#modal-default [name="postal_code"]').val(response.data.postal_code);
-                    $('#modal-default [name="country"]').val(response.data.country);
-                    $('#modal-default [name="gender"]').val(response.data.gender);
-                    $('#modal-default [name="date_of_birth"]').val(response.data.date_of_birth);
-                    $('#modal-default [name="role"]').val(response.data.role);
-
-                    // Hiển thị modal
-                    $('#modal-update').show();
-                    $('#modal-default').modal('show');
-                }
-            });
-        });
-
-
         users = @json($users);
         users.data.forEach(user => {
             let roleElement = document.querySelector(`#role_name_${user.id}`);
@@ -164,6 +140,28 @@
                         break;
                 }
             }
+        });
+
+
+
+        document.getElementById('city-select').addEventListener('click', function() {
+            console.log(1243354315)
+            if (this.options.length <= 1)
+                fetchCities();
+        });
+
+        document.getElementById('city-select').addEventListener('change', function() {
+            const cityId = this.value;
+            toggleDisabledState('district-select', cityId);
+            if (cityId)
+                fetchDistricts(cityId);
+        });
+
+        document.getElementById('district-select').addEventListener('change', function() {
+            const districtId = this.value;
+            toggleDisabledState('ward-select', districtId);
+            if (districtId)
+                fetchWards(districtId);
         });
     </script>
 @endpush

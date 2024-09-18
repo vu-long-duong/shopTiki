@@ -20,13 +20,10 @@ class Locale
     {
 
         // Lấy locale từ session hoặc mặc định
-        $locale = Session::get('locale', 'vi');
+        $locale = Session::get('locale', config('app.locale'));
 
         // Cài đặt locale
-        if (in_array($locale, ['vi', 'en']))
-            App::setLocale($locale); 
-        else 
-            App::setLocale('vi');
+        App::setLocale($locale);
 
         return $next($request);
     }

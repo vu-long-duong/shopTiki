@@ -2,7 +2,11 @@
 
 namespace App\Entities;
 
-use App\Models\Role;
+use App\Entities\Role;
+use App\Entities\City;
+use App\Entities\District;
+use App\Entities\Ward;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Database\Eloquent\Model;
 use Prettus\Repository\Contracts\Transformable;
 use Prettus\Repository\Traits\TransformableTrait;
@@ -12,7 +16,7 @@ use Prettus\Repository\Traits\TransformableTrait;
  *
  * @package namespace App\Entities;
  */
-class User extends Model implements Transformable
+class User extends Authenticatable  implements Transformable
 {
     use TransformableTrait;
 
@@ -26,11 +30,12 @@ class User extends Model implements Transformable
         'email',
         'password',
         'age',
+        'address',
         'phone',
-        'ward',
-        'district',
+        'ward_id',
+        'district_id',
         'gender',
-        'city',
+        'city_id',
         'postal_code',
         'country',
         'date_of_birth',
@@ -44,7 +49,22 @@ class User extends Model implements Transformable
 
     public function role()
     {
-        return $this->belongsTo(Role::class, 'role_id');
+        return $this->belongsTo(Role::class, 'role_id', 'id');
+    }
+
+    public function city()
+    {
+        return $this->belongsTo(City::class, 'city_id', 'id');
+    }
+
+    public function district()
+    {
+        return $this->belongsTo(District::class, 'district_id', 'id');
+    }
+
+    public function ward()
+    {
+        return $this->belongsTo(Ward::class, 'ward_id', 'id');
     }
 
 }

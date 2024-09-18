@@ -12,68 +12,68 @@ function loadContentById(id, url) {
     }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    loadContentById('header-container', './home/header.html');
-} );
+// document.addEventListener('DOMContentLoaded', () => {
+//     loadContentById('header-container', './home/header.html');
+// } );
 
-document.addEventListener('DOMContentLoaded', () => {
-    loadContentById('nav-container', './home/nav.html');
-} );
+// document.addEventListener('DOMContentLoaded', () => {
+//     loadContentById('nav-container', './home/nav.html');
+// } );
 
-document.addEventListener('DOMContentLoaded', () => {
-    loadContentById('slide-container', './home/slide.html');
-} );
+// document.addEventListener('DOMContentLoaded', () => {
+//     loadContentById('slide-container', './home/slide.html');
+// } );
 
-document.addEventListener('DOMContentLoaded', () => {
-    loadContentById('promotion-container', './home/promotion.html');
-} );
+// document.addEventListener('DOMContentLoaded', () => {
+//     loadContentById('promotion-container', './home/promotion.html');
+// } );
 
-document.addEventListener('DOMContentLoaded', () => {
-    loadContentById('super-promotion-container', './home/super-promotion.html');
-} );
+// document.addEventListener('DOMContentLoaded', () => {
+//     loadContentById('super-promotion-container', './home/super-promotion.html');
+// } );
 
-document.addEventListener('DOMContentLoaded', () => {
-    loadContentById('product-interest-container', './home/product-interest.html');
-} );
+// document.addEventListener('DOMContentLoaded', () => {
+//     loadContentById('product-interest-container', './home/product-interest.html');
+// } );
 
-document.addEventListener('DOMContentLoaded', () => {
-    loadContentById('product-price-shock-container', './home/product-price-shock.html');
-} );
+// document.addEventListener('DOMContentLoaded', () => {
+//     loadContentById('product-price-shock-container', './home/product-price-shock.html');
+// } );
 
-document.addEventListener('DOMContentLoaded', () => {
-    loadContentById('genuine-brand-container', './home/genuine-brand.html');
-} );
+// document.addEventListener('DOMContentLoaded', () => {
+//     loadContentById('genuine-brand-container', './home/genuine-brand.html');
+// } );
 
-document.addEventListener('DOMContentLoaded', () => {
-    loadContentById('genuine-import-container', './home/genuine-import.html');
-} );
+// document.addEventListener('DOMContentLoaded', () => {
+//     loadContentById('genuine-import-container', './home/genuine-import.html');
+// } );
 
-document.addEventListener('DOMContentLoaded', () => {
-    loadContentById('might-like-container', './home/might-like.html');
-} );
+// document.addEventListener('DOMContentLoaded', () => {
+//     loadContentById('might-like-container', './home/might-like.html');
+// } );
 
-document.addEventListener('DOMContentLoaded', () => {
-    loadContentById('today-suggestion-container', './home/today-suggestion.html');
-} );
+// document.addEventListener('DOMContentLoaded', () => {
+//     loadContentById('today-suggestion-container', './home/today-suggestion.html');
+// } );
 
-document.addEventListener('DOMContentLoaded', () => {
-    loadContentById('payment-svg-container', './home/payment-svg.html');
-} );
+// document.addEventListener('DOMContentLoaded', () => {
+//     loadContentById('payment-svg-container', './home/payment-svg.html');
+// } );
 
-document.addEventListener('DOMContentLoaded', () => {
-    loadContentById('footer-container', './home/footer.html');
-} );
+// document.addEventListener('DOMContentLoaded', () => {
+//     loadContentById('footer-container', './home/footer.html');
+// } );
 
-document.querySelector('.product-detail-description-view-all').addEventListener('click', function() {
-    const content = document.querySelector('.product-detail-description-content');
-    content.classList.toggle('expanded');
+// document.querySelector('.product-detail-description-view-all').addEventListener('click', function() {
+//     const content = document.querySelector('.product-detail-description-content');
+//     content.classList.toggle('expanded');
 
-    if (content.classList.contains('expanded')) {
-        this.textContent = "Thu gọn";
-    } else {
-        this.textContent = "Xem thêm";
-    }
-} );
+//     if (content.classList.contains('expanded')) {
+//         this.textContent = "Thu gọn";
+//     } else {
+//         this.textContent = "Xem thêm";
+//     }
+// } );
 
 
 function setupQuantityControls() {

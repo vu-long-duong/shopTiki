@@ -1,14 +1,15 @@
 <?php
 return [
     'users' => [
+        'list_users' => 'List user',
         'id' => 'Id',
         'name' => 'Name',
         'age' => 'Age',
         'phone' => 'Phone Number',
         'address' => 'Address',
-        'ward' => 'Ward',
-        'district' => 'District',
-        'city' => 'City',
+        'ward_id' => 'Ward',
+        'district_id' => 'District',
+        'city_id' => 'City',
         'postal_code' => 'Postal Code',
         'country' => 'Country',
         'email' => 'Email',
@@ -26,5 +27,7 @@ return [
         'remember_token' => 'Remember Token',
         'created_at' => 'Created At',
         'updated_at' => 'Updated At',
+        'control' => 'Control',
+        'role' => 'Role',
     ],
 ];

@@ -1,14 +1,14 @@
 @extends('client.layouts.app')
 
 @section('content')
-    @include('client.modal.login')
+    {{-- @include('client.modal.auth.login') --}}
+    @include('client.modal.auth.register')
 @endsection
 
 @push('scripts')
     <script type="text/javascript">
         document.addEventListener('DOMContentLoaded', function() {
             const btnAccount = document.querySelector('#js-account');
-            console.log(btnAccount); // Kiểm tra xem phần tử đã được tải vào chưa
             const modal = document.querySelector('#js-modal');
 
             if (btnAccount && modal) {

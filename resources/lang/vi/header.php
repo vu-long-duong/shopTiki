@@ -1,18 +1,19 @@
 <?php
 return [
     'users' => [
+        'list_users' => 'Danh sách người dùng ',
         'id' => 'ID',
         'name' => 'Tên',
         'age' => 'Tuổi',
         'phone' => 'Số điện thoại',
         'address' => 'Địa chỉ',
-        'ward' => 'Xã(Phường)',
-        'district' => 'Huyện(Quận)',
-        'city' => 'Tỉnh(Thành Phố)',
+        'ward_id' => 'Id Xã(Phường)',
+        'district_id' => 'Id Huyện(Quận)',
+        'city_id' => 'Id Tỉnh(Thành Phố)',
         'postal_code' => 'Mã bưu điện',
         'country' => 'Quốc gia',
-        'email' => 'Email',
-        'email_verified_at' => 'Xác thực Email',
+        'email' => 'Thư điện tử',
+        'email_verified_at' => 'Xác thực thư điện tử',
         'password' => 'Mật khẩu',
         'gender' => 'Giới tính',
         'date_of_birth' => 'Ngày sinh',
@@ -26,5 +27,7 @@ return [
         'remember_token' => 'Lưu trữ token',
         'created_at' => 'Thời gian tạo',
         'updated_at' => 'Thời gian cập nhật',
+        'control' => 'Điều khiển',
+        'role' => 'Chức vụ'
     ],
 ];
